@@ -1,0 +1,13 @@
+## .NET standart gitignore
+bin/
+obj/
+*.user
+.vs/
+*.suo
+
+# Rider / VS Code
+.idea/
+.vscode/
+
+# Test sonuçları
+TestResults/
