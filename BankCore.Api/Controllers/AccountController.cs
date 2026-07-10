@@ -3,6 +3,7 @@ using BankCore.Application.Features.Accounts.Queries.GetCustomerAccounts;
 using BankCore.Application.Features.Accounts.Commands.Deposit;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using BankCore.Application.Features.Accounts.Commands.Withdraw;
 
 namespace BankCore.Api.Controllers;
 
@@ -34,6 +35,13 @@ public class AccountsController : ControllerBase
 
     [HttpPost("deposit")]
     public async Task<IActionResult> Deposit([FromBody] DepositCommand command)
+    {
+        await _mediator.Send(command);
+        return NoContent();
+    }
+
+    [HttpPost("withdraw")]
+    public async Task<IActionResult> Withdraw([FromBody] WithdrawCommand command)
     {
         await _mediator.Send(command);
         return NoContent();

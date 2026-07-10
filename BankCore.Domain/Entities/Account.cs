@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
+using BankCore.Domain.Exceptions;
 
 namespace BankCore.Domain.Entities
 {
@@ -42,10 +43,8 @@ namespace BankCore.Domain.Entities
 
         public void Withdraw(Money amount)
         {
-            if (!IsActive)
-            {
-                throw new InvalidOperationException("Hesap aktif değil.");
-            }
+            EnsureActive();
+
             if (!Balance.IsGreaterOrEqualTo(amount))
             {
                 throw new InvalidOperationException("Yetersiz bakiye.");
