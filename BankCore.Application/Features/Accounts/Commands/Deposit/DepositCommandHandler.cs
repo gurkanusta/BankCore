@@ -1,6 +1,8 @@
 ﻿using BankCore.Application.Abstractions;
+using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using MediatR;
+
 
 namespace BankCore.Application.Features.Accounts.Commands.Deposit;
 
@@ -8,11 +10,14 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
 {
     private readonly IAccountRepository _accountRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly ITransactionRepository _transactionRepository;
 
-    public DepositCommandHandler(IAccountRepository accountRepository, IUnitOfWork unitOfWork)
+    public DepositCommandHandler(IAccountRepository accountRepository, IUnitOfWork unitOfWork, ITransactionRepository transactionRepository)
     {
         _accountRepository = accountRepository;
+        _transactionRepository = transactionRepository;
         _unitOfWork = unitOfWork;
+        
     }
 
     public async Task<Unit> Handle(DepositCommand request, CancellationToken cancellationToken)
@@ -23,6 +28,8 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
 
         var amount = new Money(request.Amount, request.Currency);
         account.Deposit(amount);
+        var transaction = new Domain.Entities.Transaction(account.Id, TransactionType.Deposit, amount);
+        await _transactionRepository.AddAsync(transaction); // izlemeye al
 
         await _unitOfWork.SaveChangesAsync(cancellationToken);
 

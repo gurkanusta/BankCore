@@ -1,5 +1,6 @@
 ﻿using BankCore.Application.Abstractions;
 using BankCore.Infrastructure.Persistence;
+using BankCore.Infrastructure.Persistence.Repositories;
 using BankCore.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -17,6 +18,7 @@ public static class DependencyInjection
         services.AddScoped<ICustomerRepository, CustomerRepository>();
         services.AddScoped<IAccountRepository, AccountRepository>();
         services.AddScoped<IUnitOfWork, UnitOfWork>();
+        services.AddScoped<ITransactionRepository, TransactionRepository>();
 
         return services;
     }

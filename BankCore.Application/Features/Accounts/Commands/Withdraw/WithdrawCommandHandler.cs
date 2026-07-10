@@ -4,6 +4,9 @@ using System.Text;
 using BankCore.Domain.ValueObjects;
 using BankCore.Application.Abstractions;
 using MediatR;
+using BankCore.Domain.Entities;
+using BankCore.Domain.Enums;
+
 
 
 
@@ -12,10 +15,13 @@ namespace BankCore.Application.Features.Accounts.Commands.Withdraw;
 public class WithdrawCommandHandler : IRequestHandler<WithdrawCommand, Unit>
 {
     private readonly IAccountRepository _accountRepository;
+    private readonly ITransactionRepository _transactionRepository;
     private readonly IUnitOfWork _unitOfWork;
-    public WithdrawCommandHandler(IAccountRepository accountRepository,IUnitOfWork unitOfWork)
+    
+    public WithdrawCommandHandler(IAccountRepository accountRepository,ITransactionRepository transactionRepository,IUnitOfWork unitOfWork)
     {
         _accountRepository = accountRepository;
+        _transactionRepository = transactionRepository;
         _unitOfWork = unitOfWork;
     }
     public async Task<Unit> Handle(WithdrawCommand request, CancellationToken cancellationToken)
@@ -27,6 +33,10 @@ public class WithdrawCommandHandler : IRequestHandler<WithdrawCommand, Unit>
         }
         var amount = new Money(request.Amount, request.Currency);
         account.Withdraw(amount);
+
+        var transaction= new Transaction(account.Id, TransactionType.Withdraw, amount);
+        await _transactionRepository.AddAsync(transaction);
+
         await _unitOfWork.SaveChangesAsync(cancellationToken);
         return Unit.Value;
     }
