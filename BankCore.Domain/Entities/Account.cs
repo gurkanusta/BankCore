@@ -15,7 +15,7 @@ namespace BankCore.Domain.Entities
         public Money Balance { get; private set; }
         public bool IsActive { get; private set; }
         public AccountType Type { get; private set; }
-
+        public byte[] RowVersion { get; private set; }= Array.Empty<byte>();
         private Account() { }
 
         public Account(Guid customerId, string accountNumber, Money initialBalance, AccountType type)

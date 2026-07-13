@@ -22,6 +22,6 @@ public class AccountConfiguration : IEntityTypeConfiguration<Account>
             money.Property(m => m.Currency).HasColumnName("Balance_Currency").HasMaxLength(3);
         });
 
-        //builder.Property(a => a.RowVersion).IsRowVersion();
+        builder.Property(a => a.RowVersion).IsRowVersion();
     }
 }
