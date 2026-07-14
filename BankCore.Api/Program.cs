@@ -12,7 +12,12 @@ builder.Services.AddSingleton(mapsterConfig);
 builder.Services.AddScoped<IMapper, ServiceMapper>();
 
 builder.Services.AddMediatR(cfg =>
-    cfg.RegisterServicesFromAssembly(typeof(BankCore.Application.Features.Customers.Commands.CreateCustomer.CreateCustomerCommand).Assembly));
+{
+    cfg.RegisterServicesFromAssembly(typeof(BankCore.Application.Features.Customers.Commands.CreateCustomer.CreateCustomerCommand).Assembly);
+    cfg.AddOpenBehavior(typeof(BankCore.Application.Behaviors.ValidationBehavior<,>));
+});
+
+
 
 builder.Services.AddValidatorsFromAssembly(
     typeof(BankCore.Application.Features.Customers.Commands.CreateCustomer.CreateCustomerCommand).Assembly);

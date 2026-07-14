@@ -4,6 +4,7 @@ using System.Text;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using BankCore.Domain.Exceptions;
+using BankCore.Domain.Constants;
 
 namespace BankCore.Domain.Entities
 {
@@ -27,7 +28,7 @@ namespace BankCore.Domain.Entities
             Id = Guid.NewGuid();
             CustomerId = customerId;
             AccountNumber = accountNumber;
-            Balance = new Money(0,"TRY");
+            Balance = new Money(0, Constants.CurrencyCodes.TRY);
             IsActive = true;
             Type = type;
         }
