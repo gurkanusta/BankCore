@@ -8,6 +8,7 @@ public class BankCoreDbContext : DbContext
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Account> Accounts => Set<Account>();
     public DbSet<Transaction> Transactions => Set<Transaction>();
+    public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
 
     public BankCoreDbContext(DbContextOptions<BankCoreDbContext> options) : base(options)
     {

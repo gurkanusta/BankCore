@@ -2,6 +2,9 @@
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using MediatR;
+using Microsoft.Extensions.Logging;
+using BankCore.Domain.Entities;
+
 
 
 namespace BankCore.Application.Features.Accounts.Commands.Deposit;
@@ -11,13 +14,15 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
     private readonly IAccountRepository _accountRepository;
     private readonly IUnitOfWork _unitOfWork;
     private readonly ITransactionRepository _transactionRepository;
+    private readonly ILogger<DepositCommandHandler> _logger;
 
-    public DepositCommandHandler(IAccountRepository accountRepository, IUnitOfWork unitOfWork, ITransactionRepository transactionRepository)
+
+    public DepositCommandHandler(IAccountRepository accountRepository, IUnitOfWork unitOfWork, ITransactionRepository transactionRepository, ILogger<DepositCommandHandler> logger)
     {
         _accountRepository = accountRepository;
         _transactionRepository = transactionRepository;
         _unitOfWork = unitOfWork;
-        
+        _logger = logger;
     }
 
     public async Task<Unit> Handle(DepositCommand request, CancellationToken cancellationToken)
