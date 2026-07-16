@@ -127,3 +127,23 @@ SET IMPLICIT_TRANSACTIONS OFF;
 SET NOCOUNT ON;
 INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
 VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-14 14:41:01.796 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-14 14:41:02.145 +03:00 [FTL] Uygulama başlatılamadı!
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\Users\st900797\Desktop\VB_proje\BankCore.Api\Program.cs:line 62
+2026-07-14 14:41:20.650 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-14 14:41:20.894 +03:00 [FTL] Uygulama başlatılamadı!
+Microsoft.Extensions.Hosting.HostAbortedException: The host was aborted.
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.ThrowHostAborted()
+   at Microsoft.Extensions.Hosting.HostFactoryResolver.HostingListener.OnNext(KeyValuePair`2 value)
+   at System.Diagnostics.DiagnosticListener.Write(String name, Object value)
+   at Microsoft.Extensions.Hosting.HostBuilder.ResolveHost(IServiceProvider serviceProvider, DiagnosticListener diagnosticListener)
+   at Microsoft.Extensions.Hosting.HostApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.WebApplicationBuilder.Build()
+   at Program.<Main>$(String[] args) in D:\Users\st900797\Desktop\VB_proje\BankCore.Api\Program.cs:line 62

@@ -1,8 +1,16 @@
+using BankCore.Application.Abstractions;
+using BankCore.Application.Identity;
+using BankCore.Application.Settings;
 using BankCore.Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using BankCore.Infrastructure.Persistence;
+using BankCore.Infrastructure.Services;
 using FluentValidation;
-using BankCore.Infrastructure;
 using Mapster;
 using MapsterMapper;
+using Microsoft.AspNetCore.Identity;
 using Serilog;
 
 Log.Logger=new LoggerConfiguration()
@@ -31,6 +39,44 @@ try
     });
 
 
+    builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+    {
+        options.Password.RequireDigit = true;
+        options.Password.RequiredLength = 6;
+        options.Password.RequireUppercase = false;
+        options.Password.RequireNonAlphanumeric = false;
+    })
+    .AddEntityFrameworkStores<BankCoreDbContext>()
+    .AddDefaultTokenProviders();
+
+
+
+
+    var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>()!;
+
+    builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSettings.Issuer,
+            ValidAudience = jwtSettings.Audience,
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings.SecretKey))
+        };
+    });
+
+    builder.Services.AddAuthorization();
+
+    builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
+    builder.Services.AddScoped<ITokenService, TokenService>();
 
     builder.Services.AddValidatorsFromAssembly(
         typeof(BankCore.Application.Features.Customers.Commands.CreateCustomer.CreateCustomerCommand).Assembly);
@@ -52,6 +98,7 @@ try
     }
 
     app.UseHttpsRedirection();
+    app.UseAuthentication();
     app.UseAuthorization();
     app.MapControllers();
 

@@ -1,9 +1,10 @@
 ﻿using BankCore.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using BankCore.Application.Identity;
 namespace BankCore.Infrastructure.Persistence;
 
-public class BankCoreDbContext : DbContext
+public class BankCoreDbContext : IdentityDbContext<ApplicationUser>
 {
     public DbSet<Customer> Customers => Set<Customer>();
     public DbSet<Account> Accounts => Set<Account>();
@@ -16,7 +17,8 @@ public class BankCoreDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BankCoreDbContext).Assembly);
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(typeof(BankCoreDbContext).Assembly);
+        
     }
 }
