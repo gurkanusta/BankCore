@@ -73,6 +73,8 @@ try
         };
     });
 
+    
+
     builder.Services.AddAuthorization();
 
     builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
@@ -95,6 +97,22 @@ try
     {
         app.UseSwagger();
         app.UseSwaggerUI();
+    }
+
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+        string[] roles = { BankCore.Domain.Constants.RoleNames.Customer, BankCore.Domain.Constants.RoleNames.Admin };
+
+        foreach (var role in roles)
+        {
+            if (!await roleManager.RoleExistsAsync(role))
+            {
+                await roleManager.CreateAsync(new IdentityRole(role));
+            }
+        }
     }
 
     app.UseHttpsRedirection();

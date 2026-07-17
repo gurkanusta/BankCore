@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using BankCore.Application.Abstractions;
+using BankCore.Domain.Constants;
 using BankCore.Domain.Entities;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
@@ -25,12 +26,12 @@ public class TransferCommandHandler : IRequestHandler<TransferCommand, Unit>
         var sourceAccount = await _accountRepository.GetByIdAsync(request.SourceAccountId);
         if (sourceAccount == null)
         {
-            throw new InvalidCastException("Kaynak hesap bulunamadı.");
+            throw new InvalidCastException(ErrorMessages.SourceAccountNotFound);
         }
         var targetAccount = await _accountRepository.GetByIdAsync(request.TargetAccountId);
         if (targetAccount == null)
         {
-            throw new InvalidCastException("Hedef hesap bulunamadı.");
+            throw new InvalidCastException(ErrorMessages.TargetAccountNotFound);
         }
         var amount = new Money(request.Amount, request.Currency);
         sourceAccount.Withdraw(amount);

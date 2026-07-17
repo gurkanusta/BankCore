@@ -1,4 +1,5 @@
 ﻿using BankCore.Application.Abstractions;
+using BankCore.Domain.Constants;
 using BankCore.Domain.Entities;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
@@ -26,7 +27,7 @@ public class CreateAccountCommandHandler : IRequestHandler<CreateAccountCommand,
     {
         var customer = await _customerRepository.GetByIdAsync(request.CustomerId);
         if (customer is null)
-            throw new InvalidOperationException("Belirtilen müşteri bulunamadı.");
+            throw new InvalidOperationException(ErrorMessages.CustomerNotFound);
 
         var accountNumber = GenerateAccountNumber();
 

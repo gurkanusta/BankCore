@@ -1,4 +1,5 @@
-﻿using FluentValidation;
+﻿using BankCore.Domain.Constants;
+using FluentValidation;
 
 namespace BankCore.Application.Features.Accounts.Commands.Deposit;
 
@@ -7,13 +8,13 @@ public class DepositCommandValidator : AbstractValidator<DepositCommand>
     public DepositCommandValidator()
     {
         RuleFor(x => x.AccountId)
-            .NotEmpty().WithMessage("Hesap seçilmelidir.");
+            .NotEmpty().WithMessage(ValidationMessages.AccountIdRequired);
 
         RuleFor(x => x.Amount)
-            .GreaterThan(0).WithMessage("Tutar sıfırdan büyük olmalıdır.");
+            .GreaterThan(0).WithMessage(ValidationMessages.AmountMustBePositive);
 
         RuleFor(x => x.Currency)
-            .NotEmpty().WithMessage("Para birimi belirtilmelidir.")
-            .Length(3).WithMessage("Para birimi 3 karakter olmalıdır (örn. TRY).");
+            .NotEmpty().WithMessage(ValidationMessages.CurrencyRequired)
+            .Length(3).WithMessage(ValidationMessages.CurrencyLength);
     }
 }

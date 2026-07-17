@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-
+using BankCore.Domain.Constants;
 namespace BankCore.Application.Features.Accounts.Commands.CreateAccount;
 
 public class CreateAccountCommandValidator : AbstractValidator<CreateAccountCommand>
@@ -7,9 +7,9 @@ public class CreateAccountCommandValidator : AbstractValidator<CreateAccountComm
     public CreateAccountCommandValidator()
     {
         RuleFor(x => x.CustomerId)
-            .NotEmpty().WithMessage("Müşteri seçilmelidir.");
+            .NotEmpty().WithMessage(ValidationMessages.AccountIdRequired);
 
         RuleFor(x => x.AccountType)
-            .InclusiveBetween(1, 2).WithMessage("Geçersiz hesap türü.");
+            .InclusiveBetween(1, 2).WithMessage(ValidationMessages.AccountTypeInvalid);
     }
 }

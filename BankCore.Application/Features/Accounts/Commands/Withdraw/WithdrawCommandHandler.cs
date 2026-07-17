@@ -6,6 +6,7 @@ using BankCore.Application.Abstractions;
 using MediatR;
 using BankCore.Domain.Entities;
 using BankCore.Domain.Enums;
+using BankCore.Domain.Constants;
 
 
 
@@ -29,7 +30,7 @@ public class WithdrawCommandHandler : IRequestHandler<WithdrawCommand, Unit>
         var account = await _accountRepository.GetByIdAsync(request.AccountId);
         if (account == null)
         {
-            throw new InvalidCastException("Hesap bulunamadı.");
+            throw new InvalidCastException(ErrorMessages.AccountNotFound);
         }
         var amount = new Money(request.Amount, request.Currency);
         account.Withdraw(amount);

@@ -20,7 +20,7 @@ public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TReques
     {
         if (!_validators.Any())
         {
-            return await next();
+            return await next();//validator yoksa direkt sıradakine geç
         }
 
         var context = new ValidationContext<TRequest>(request);

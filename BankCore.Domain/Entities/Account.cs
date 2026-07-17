@@ -5,6 +5,8 @@ using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using BankCore.Domain.Exceptions;
 using BankCore.Domain.Constants;
+using BankCore.Domain.Exceptions;
+
 
 namespace BankCore.Domain.Entities
 {
@@ -37,7 +39,7 @@ namespace BankCore.Domain.Entities
         {
             if (!IsActive)
             {
-                throw new InvalidOperationException("Hesap aktif değil.");
+                throw new InvalidOperationException(ErrorMessages.InactiveAccount);
             }
             Balance = Balance.Add(amount);
         }
@@ -48,7 +50,7 @@ namespace BankCore.Domain.Entities
 
             if (!Balance.IsGreaterOrEqualTo(amount))
             {
-                throw new InvalidOperationException("Yetersiz bakiye.");
+                throw new InvalidOperationException(ErrorMessages.InsufficientBalance);
             }
             Balance = Balance.Subtract(amount);
         }
@@ -60,7 +62,7 @@ namespace BankCore.Domain.Entities
 
         private void EnsureActive() { 
             if (!IsActive)
-                throw new InvalidOperationException("Hesap aktif değil.");
+                throw new InvalidOperationException(ErrorMessages.InactiveAccountOperation);
         }
     }
 }

@@ -4,6 +4,7 @@ using BankCore.Domain.ValueObjects;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using BankCore.Domain.Entities;
+using BankCore.Domain.Constants;
 
 
 
@@ -29,7 +30,7 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
     {
         var account = await _accountRepository.GetByIdAsync(request.AccountId);
         if (account is null)
-            throw new InvalidOperationException("Hesap bulunamadı.");
+            throw new InvalidOperationException(ErrorMessages.AccountNotFound);
 
         var amount = new Money(request.Amount, request.Currency);
         account.Deposit(amount);
