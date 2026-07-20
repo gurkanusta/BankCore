@@ -1,0 +1,333 @@
+2026-07-20 09:41:34.761 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 09:41:37.239 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 09:41:37.312 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 09:41:37.460 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 09:41:37.726 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 09:41:37.730 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 09:41:37.779 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 09:41:37.781 +03:00 [INF] Hosting environment: Development
+2026-07-20 09:41:37.783 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 09:41:38.371 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 09:41:38.576 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 215.5345ms
+2026-07-20 09:41:38.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 09:41:38.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 09:41:38.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 09:41:38.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 09:41:38.590 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 09:41:38.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 09:41:38.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 09:41:38.658 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 68.8139ms
+2026-07-20 09:41:38.660 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 66.9402ms
+2026-07-20 09:41:38.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 73.3149ms
+2026-07-20 09:41:38.667 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 76.7636ms
+2026-07-20 09:41:38.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 73.7279ms
+2026-07-20 09:41:38.663 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 73.7322ms
+2026-07-20 09:41:38.719 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 102.6252ms
+2026-07-20 09:41:39.635 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 09:41:39.657 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 21.3809ms
+2026-07-20 09:41:55.658 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/0eb447c5-c76c-4d62-8532-439a2c59cb65 - null null
+2026-07-20 09:41:55.724 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-20 09:41:55.731 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-20 09:41:55.735 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/0eb447c5-c76c-4d62-8532-439a2c59cb65 - 401 0 null 77.2798ms
+2026-07-20 11:39:45.815 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 11:39:47.724 +03:00 [INF] Executed DbCommand (50ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 11:39:47.799 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 11:39:47.896 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 11:39:48.141 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 11:39:48.144 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 11:39:48.188 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 11:39:48.191 +03:00 [INF] Hosting environment: Development
+2026-07-20 11:39:48.192 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 11:39:49.225 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 11:39:49.409 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 189.7876ms
+2026-07-20 11:39:49.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 11:39:49.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 11:39:49.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 11:39:49.431 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 6.7732ms
+2026-07-20 11:39:49.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 11:39:49.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 11:39:49.424 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 11:39:49.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 11:39:49.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 22.5829ms
+2026-07-20 11:39:49.446 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 23.0682ms
+2026-07-20 11:39:49.448 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 25.0323ms
+2026-07-20 11:39:49.451 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 28.8042ms
+2026-07-20 11:39:49.448 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 25.5802ms
+2026-07-20 11:39:49.487 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.5477ms
+2026-07-20 11:39:50.465 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 11:39:50.480 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 14.4092ms
+2026-07-20 11:39:58.300 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/login - application/json 69
+2026-07-20 11:39:58.361 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-20 11:39:58.381 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-20 11:39:58.385 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 11:39:58.404 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BankCore.Application.Features.Auth.Commands.Login.LoginCommand) on controller BankCore.Api.Controllers.AuthController (BankCore.Api).
+2026-07-20 11:39:58.420 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:39:58.528 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CustomerId], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-20 11:39:58.669 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-20 11:39:58.803 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 1000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-20 11:39:58.820 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-20 11:39:58.830 +03:00 [INF] Executed action BankCore.Api.Controllers.AuthController.Login (BankCore.Api) in 420.1749ms
+2026-07-20 11:39:58.832 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 11:39:58.838 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 538.2117ms
+2026-07-20 11:41:53.458 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/0eb447c5-c76c-4d62-8532-439a2c59cb65 - null null
+2026-07-20 11:41:53.464 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-20 11:41:53.466 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-20 11:41:53.472 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-20 11:41:53.480 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-20 11:41:53.481 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/0eb447c5-c76c-4d62-8532-439a2c59cb65 - 401 0 null 22.468ms
+2026-07-20 11:43:23.152 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - null null
+2026-07-20 11:43:23.156 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-20 11:43:23.159 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-20 11:43:23.160 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-20 11:43:23.161 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-20 11:43:23.162 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - 401 0 null 9.742ms
+2026-07-20 11:43:55.644 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - null null
+2026-07-20 11:43:55.646 +03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenMalformedException: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken.ReadToken(ReadOnlyMemory`1 encodedTokenMemory)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebToken..ctor(String jwtEncodedString, TryReadJwtClaim tryReadJwtClaim)
+   at Microsoft.IdentityModel.JsonWebTokens.JsonWebTokenHandler.ReadToken(String token, TokenValidationParameters validationParameters)
+2026-07-20 11:43:55.648 +03:00 [INF] Bearer was not authenticated. Failure message: IDX14100: JWT is not well formed, there are no dots (.).
+The token needs to be in JWS or JWE Compact Serialization Format. (JWS): 'EncodedHeader.EncodedPayload.EncodedSignature'. (JWE): 'EncodedProtectedHeader.EncodedEncryptedKey.EncodedInitializationVector.EncodedCiphertext.EncodedAuthenticationTag'.
+2026-07-20 11:43:55.657 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-20 11:43:55.658 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-20 11:43:55.659 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - 401 0 null 15.187ms
+2026-07-20 11:47:07.798 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - null null
+2026-07-20 11:47:07.842 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 11:47:07.851 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 11:49:19.646 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 11:49:21.409 +03:00 [INF] Executed DbCommand (53ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 11:49:21.488 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 11:49:21.594 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 11:49:21.815 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 11:49:21.817 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 11:49:21.859 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 11:49:21.862 +03:00 [INF] Hosting environment: Development
+2026-07-20 11:49:21.862 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 11:49:22.820 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 11:49:23.033 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 226.7151ms
+2026-07-20 11:49:23.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 11:49:23.048 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 11:49:23.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 11:49:23.084 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 35.558ms
+2026-07-20 11:49:23.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 11:49:23.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 11:49:23.047 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 11:49:23.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 11:49:23.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 51.1541ms
+2026-07-20 11:49:23.098 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 51.1866ms
+2026-07-20 11:49:23.100 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 53.0772ms
+2026-07-20 11:49:23.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 54.3969ms
+2026-07-20 11:49:23.142 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 66.7288ms
+2026-07-20 11:49:23.165 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 114.5688ms
+2026-07-20 11:49:25.166 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 11:49:25.181 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.251ms
+2026-07-20 11:49:26.076 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/login - application/json 69
+2026-07-20 11:49:26.180 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 11:49:26.199 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BankCore.Application.Features.Auth.Commands.Login.LoginCommand) on controller BankCore.Api.Controllers.AuthController (BankCore.Api).
+2026-07-20 11:49:26.210 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 11:49:26.305 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CustomerId], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-20 11:49:26.445 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-20 11:49:26.565 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 1000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-20 11:49:26.584 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-20 11:49:26.593 +03:00 [INF] Executed action BankCore.Api.Controllers.AuthController.Login (BankCore.Api) in 387.4272ms
+2026-07-20 11:49:26.594 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 11:49:26.600 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 523.3452ms
+2026-07-20 11:49:43.712 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5D92DA39-F690-4BE6-80B5-4A4D4815D44B - null null
+2026-07-20 11:49:43.723 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 11:49:43.732 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:38:59.134 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 13:39:00.912 +03:00 [INF] Executed DbCommand (42ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:39:00.979 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:39:01.081 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 13:39:01.329 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 13:39:01.330 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 13:39:01.398 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 13:39:01.399 +03:00 [INF] Hosting environment: Development
+2026-07-20 13:39:01.401 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 13:39:02.103 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 13:39:02.299 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 210.5927ms
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 13:39:02.312 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 13:39:02.317 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 5.5864ms
+2026-07-20 13:39:02.314 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 13:39:02.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 21.4954ms
+2026-07-20 13:39:02.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 25.5852ms
+2026-07-20 13:39:02.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 25.5854ms
+2026-07-20 13:39:02.337 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 25.5723ms
+2026-07-20 13:39:02.344 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 32.4809ms
+2026-07-20 13:39:02.383 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.8981ms
+2026-07-20 13:39:03.396 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 13:39:03.413 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 16.6909ms
+2026-07-20 13:39:20.040 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/login - application/json 69
+2026-07-20 13:39:20.141 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 13:39:20.160 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BankCore.Application.Features.Auth.Commands.Login.LoginCommand) on controller BankCore.Api.Controllers.AuthController (BankCore.Api).
+2026-07-20 13:39:20.171 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 13:39:20.272 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CustomerId], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-20 13:39:20.411 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-20 13:39:20.547 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 1000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-20 13:39:20.566 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-20 13:39:20.575 +03:00 [INF] Executed action BankCore.Api.Controllers.AuthController.Login (BankCore.Api) in 408.3714ms
+2026-07-20 13:39:20.577 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 13:39:20.582 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 541.6407ms
+2026-07-20 13:39:23.903 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:39:23.914 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:39:23.921 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:42:33.200 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 13:42:35.253 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:42:35.323 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:42:35.431 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 13:42:35.731 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 13:42:35.733 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 13:42:35.778 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 13:42:35.779 +03:00 [INF] Hosting environment: Development
+2026-07-20 13:42:35.780 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 13:42:36.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 13:42:36.727 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 194.8701ms
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 13:42:36.750 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 9.3692ms
+2026-07-20 13:42:36.741 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 13:42:36.745 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 13:42:36.760 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 19.8375ms
+2026-07-20 13:42:36.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 23.0019ms
+2026-07-20 13:42:36.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 23.0675ms
+2026-07-20 13:42:36.768 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 26.9255ms
+2026-07-20 13:42:36.764 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 22.9281ms
+2026-07-20 13:42:36.799 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 54.495ms
+2026-07-20 13:42:37.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 13:42:37.815 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.1505ms
+2026-07-20 13:42:44.560 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:42:44.712 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:42:44.741 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:42:44.757 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 13:43:37.625 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 13:43:40.488 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:43:40.575 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:43:40.674 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 13:43:40.986 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 13:43:40.988 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 13:43:41.039 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 13:43:41.041 +03:00 [INF] Hosting environment: Development
+2026-07-20 13:43:41.041 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 13:43:41.316 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 13:43:41.489 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 181.1697ms
+2026-07-20 13:43:41.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 13:43:41.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 13:43:41.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 13:43:41.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 13:43:41.501 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 13:43:41.524 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 19.9277ms
+2026-07-20 13:43:41.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 13:43:41.504 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 13:43:41.529 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 28.706ms
+2026-07-20 13:43:41.534 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 33.0405ms
+2026-07-20 13:43:41.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 51.8752ms
+2026-07-20 13:43:41.553 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 51.8297ms
+2026-07-20 13:43:41.570 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 65.7823ms
+2026-07-20 13:43:41.604 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 100.3195ms
+2026-07-20 13:43:42.536 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 13:43:42.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 15.1573ms
+2026-07-20 13:43:54.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:43:54.755 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:43:54.772 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:43:54.784 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.

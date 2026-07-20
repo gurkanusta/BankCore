@@ -7,6 +7,7 @@ using MediatR;
 using BankCore.Domain.Entities;
 using BankCore.Domain.Enums;
 using BankCore.Domain.Constants;
+using BankCore.Application.Exceptions;
 
 
 
@@ -17,12 +18,14 @@ public class WithdrawCommandHandler : IRequestHandler<WithdrawCommand, Unit>
 {
     private readonly IAccountRepository _accountRepository;
     private readonly ITransactionRepository _transactionRepository;
+    private readonly ICurrentUserService _currentUserService;
     private readonly IUnitOfWork _unitOfWork;
     
-    public WithdrawCommandHandler(IAccountRepository accountRepository,ITransactionRepository transactionRepository,IUnitOfWork unitOfWork)
+    public WithdrawCommandHandler(IAccountRepository accountRepository,ICurrentUserService currentUserService ,ITransactionRepository transactionRepository,IUnitOfWork unitOfWork)
     {
         _accountRepository = accountRepository;
         _transactionRepository = transactionRepository;
+        _currentUserService = currentUserService;
         _unitOfWork = unitOfWork;
     }
     public async Task<Unit> Handle(WithdrawCommand request, CancellationToken cancellationToken)
@@ -32,6 +35,10 @@ public class WithdrawCommandHandler : IRequestHandler<WithdrawCommand, Unit>
         {
             throw new InvalidCastException(ErrorMessages.AccountNotFound);
         }
+
+        if (!_currentUserService.IsAdmin && account.CustomerId != _currentUserService.CustomerId)
+            throw new ForbiddenAccessException(ErrorMessages.AccessDenied);
+
         var amount = new Money(request.Amount, request.Currency);
         account.Withdraw(amount);
 

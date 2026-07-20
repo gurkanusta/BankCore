@@ -13,6 +13,7 @@ using MapsterMapper;
 using Microsoft.AspNetCore.Identity;
 using Serilog;
 
+
 Log.Logger=new LoggerConfiguration()
     .MinimumLevel.Information()
     .WriteTo.Console()
@@ -74,7 +75,8 @@ try
     });
 
     
-
+    builder.Services.AddHttpContextAccessor();
+    builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
     builder.Services.AddAuthorization();
 
     builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));

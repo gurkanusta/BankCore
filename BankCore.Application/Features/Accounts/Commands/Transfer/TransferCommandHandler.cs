@@ -7,6 +7,7 @@ using BankCore.Domain.Entities;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using MediatR;
+using BankCore.Application.Exceptions;
 
 namespace BankCore.Application.Features.Accounts.Commands.Transfer;
 
@@ -15,11 +16,13 @@ public class TransferCommandHandler : IRequestHandler<TransferCommand, Unit>
     private readonly IAccountRepository _accountRepository;
     private readonly ITransactionRepository _transactionRepository;
     private readonly IUnitOfWork _unitOfWork;
-    public TransferCommandHandler(IAccountRepository accountRepository, ITransactionRepository transactionRepository, IUnitOfWork unitOfWork)
+    private readonly ICurrentUserService _currentUserService;
+    public TransferCommandHandler(IAccountRepository accountRepository,ICurrentUserService currentUserService ,ITransactionRepository transactionRepository, IUnitOfWork unitOfWork)
     {
         _accountRepository = accountRepository;
         _transactionRepository = transactionRepository;
         _unitOfWork = unitOfWork;
+        _currentUserService = currentUserService;
     }
     public async Task<Unit> Handle(TransferCommand request, CancellationToken cancellationToken)
     {
@@ -28,6 +31,10 @@ public class TransferCommandHandler : IRequestHandler<TransferCommand, Unit>
         {
             throw new InvalidCastException(ErrorMessages.SourceAccountNotFound);
         }
+
+        if (!_currentUserService.IsAdmin && sourceAccount.CustomerId != _currentUserService.CustomerId)
+            throw new ForbiddenAccessException(ErrorMessages.AccessDenied);
+
         var targetAccount = await _accountRepository.GetByIdAsync(request.TargetAccountId);
         if (targetAccount == null)
         {

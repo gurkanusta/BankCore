@@ -21,4 +21,5 @@ public static class ErrorMessages
     //kimlik doğrulama
     public const string InvalidLoginCredentials = "E-posta veya şifre hatalı.";
     public const string UserCreationFailed = "Kullanıcı oluşturulamadı: {0}";
+    public const string AccessDenied = "Bu işleme erişim yetkiniz bulunmamaktadır.";
 }

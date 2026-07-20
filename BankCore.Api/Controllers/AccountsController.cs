@@ -5,9 +5,11 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using BankCore.Application.Features.Accounts.Commands.Withdraw;
 using BankCore.Application.Features.Accounts.Commands.Transfer;
+using Microsoft.AspNetCore.Authorization;
 
 namespace BankCore.Api.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class AccountsController : ControllerBase

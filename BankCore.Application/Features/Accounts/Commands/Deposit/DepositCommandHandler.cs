@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.Extensions.Logging;
 using BankCore.Domain.Entities;
 using BankCore.Domain.Constants;
+using BankCore.Application.Exceptions;
 
 
 
@@ -16,14 +17,18 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
     private readonly IUnitOfWork _unitOfWork;
     private readonly ITransactionRepository _transactionRepository;
     private readonly ILogger<DepositCommandHandler> _logger;
+    private readonly ICurrentUserService _currentUserService;
 
 
-    public DepositCommandHandler(IAccountRepository accountRepository, IUnitOfWork unitOfWork, ITransactionRepository transactionRepository, ILogger<DepositCommandHandler> logger)
+    public DepositCommandHandler(IAccountRepository accountRepository,ICurrentUserService currentUserService , IUnitOfWork unitOfWork, ITransactionRepository transactionRepository, ILogger<DepositCommandHandler> logger)
     {
         _accountRepository = accountRepository;
         _transactionRepository = transactionRepository;
         _unitOfWork = unitOfWork;
+        _currentUserService = currentUserService; 
         _logger = logger;
+        
+
     }
 
     public async Task<Unit> Handle(DepositCommand request, CancellationToken cancellationToken)
@@ -31,6 +36,9 @@ public class DepositCommandHandler : IRequestHandler<DepositCommand, Unit>
         var account = await _accountRepository.GetByIdAsync(request.AccountId);
         if (account is null)
             throw new InvalidOperationException(ErrorMessages.AccountNotFound);
+
+        if(!_currentUserService.IsAdmin && account.CustomerId!=_currentUserService.CustomerId)
+            throw new ForbiddenAccessException(ErrorMessages.AccessDenied);
 
         var amount = new Money(request.Amount, request.Currency);
         account.Deposit(amount);
