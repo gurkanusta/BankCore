@@ -331,3 +331,4 @@ WHERE [a].[NormalizedName] = @normalizedName
 2026-07-20 13:43:54.755 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
 2026-07-20 13:43:54.772 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
 2026-07-20 13:43:54.784 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 13:53:09.212 +03:00 [INF] Uygulama başlatılıyor...

@@ -16,7 +16,7 @@ public class GetCustomersAccountQueryHandler : IRequestHandler<GetCustomerAccoun
     {
         _accountRepository = accountRepository;
         _mapper = mapper;
-        _currentUserService = _currentUserService;
+        _currentUserService = currentUserService;
         
     }
 
@@ -28,4 +28,5 @@ public class GetCustomersAccountQueryHandler : IRequestHandler<GetCustomerAccoun
         var accounts = await _accountRepository.GetByCustomerIdAsync(request.CustomerId);
         return _mapper.Map<List<AccountDto>>(accounts);
     }
+
 }
