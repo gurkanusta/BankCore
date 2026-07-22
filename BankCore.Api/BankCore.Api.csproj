@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BankCore.Application\BankCore.Application.csproj" />
+    <ProjectReference Include="..\BankCore.Domain\BankCore.Domain.csproj" />
     <ProjectReference Include="..\BankCore.Infrastructure\BankCore.Infrastructure.csproj" />
   </ItemGroup>
 

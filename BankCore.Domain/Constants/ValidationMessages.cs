@@ -23,4 +23,7 @@ public static class ValidationMessages
     public const string SourceAccountRequired = "Kaynak hesap seçilmelidir.";
     public const string TargetAccountRequired = "Hedef hesap seçilmelidir.";
     public const string SourceTargetSameAccount = "Kaynak ve hedef hesap aynı olamaz.";
+    public const string DontUseDifferentCurrency = "Farklı para birimleri işleme alınamaz";
+    public const string SubtractionOperationCannotBeNegative = "Çıkarma işlemi sonucu negatif olamaz.";
+    public const string InvalidTransactionAmount = "Geçersiz İşlem Tutarı";
 }

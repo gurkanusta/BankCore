@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using BankCore.Domain.Constants;
 using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 
@@ -20,7 +21,7 @@ namespace BankCore.Domain.Entities
         {
             if (amount == null || amount.Amount <= 0)
             {
-                throw new ArgumentException("Geçersiz işlem tutarı.", nameof(amount));
+                throw new ArgumentException(ValidationMessages.InvalidTransactionAmount, nameof(amount));
             }
             Id = Guid.NewGuid();
             AccountId = accountId;

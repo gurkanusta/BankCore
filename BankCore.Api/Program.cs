@@ -12,6 +12,8 @@ using Mapster;
 using MapsterMapper;
 using Microsoft.AspNetCore.Identity;
 using Serilog;
+using BankCore.Api.Middleware;
+using BankCore.Domain.Exceptions;
 
 
 Log.Logger=new LoggerConfiguration()
@@ -116,7 +118,7 @@ try
             }
         }
     }
-
+    app.UseGlobalExceptionsHandling();
     app.UseHttpsRedirection();
     app.UseAuthentication();
     app.UseAuthorization();

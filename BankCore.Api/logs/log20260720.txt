@@ -332,3 +332,112 @@ WHERE [a].[NormalizedName] = @normalizedName
 2026-07-20 13:43:54.772 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
 2026-07-20 13:43:54.784 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
 2026-07-20 13:53:09.212 +03:00 [INF] Uygulama başlatılıyor...
+2026-07-20 13:53:11.632 +03:00 [INF] Executed DbCommand (48ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:53:11.720 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-20 13:53:11.841 +03:00 [INF] User profile is available. Using 'D:\Users\st900797\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-20 13:53:12.148 +03:00 [INF] Now listening on: https://localhost:5001
+2026-07-20 13:53:12.151 +03:00 [INF] Now listening on: http://localhost:5000
+2026-07-20 13:53:12.230 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-20 13:53:12.233 +03:00 [INF] Hosting environment: Development
+2026-07-20 13:53:12.234 +03:00 [INF] Content root path: D:\Users\st900797\Desktop\VB_proje\BankCore.Api
+2026-07-20 13:53:12.935 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.html - null null
+2026-07-20 13:53:13.203 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:53:13.379 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.html - 304 null null 461.0233ms
+2026-07-20 13:53:13.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.css - null null
+2026-07-20 13:53:13.400 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-20 13:53:13.398 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - null null
+2026-07-20 13:53:13.399 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - null null
+2026-07-20 13:53:13.402 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-20 13:53:13.428 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/index.js - null null
+2026-07-20 13:53:13.429 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/_vs/browserLink - null null
+2026-07-20 13:53:13.491 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 14929 application/javascript; charset=utf-8 91.5444ms
+2026-07-20 13:53:13.443 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.css - 304 null null 44.4154ms
+2026-07-20 13:53:13.445 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui.css - 304 null null 47.1023ms
+2026-07-20 13:53:13.488 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-bundle.js - 304 null null 89.2826ms
+2026-07-20 13:53:13.484 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/swagger-ui-standalone-preset.js - 304 null null 82.3619ms
+2026-07-20 13:53:13.498 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/index.js - 304 null null 93.4539ms
+2026-07-20 13:53:13.589 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 160.1534ms
+2026-07-20 13:53:13.608 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:53:13.634 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:53:13.649 +03:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-07-20 13:53:13.794 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@customerId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountNumber], [a].[CustomerId], [a].[IsActive], [a].[RowVersion], [a].[Type], [a].[Balance_Amount], [a].[Balance_Currency]
+FROM [Accounts] AS [a]
+WHERE [a].[CustomerId] = @customerId
+2026-07-20 13:53:13.915 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BankCore.Application.Features.Customers.Queries.GetCustomerById.AccountDto, BankCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-20 13:53:13.942 +03:00 [INF] Executed action BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api) in 299.0956ms
+2026-07-20 13:53:13.945 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:53:13.952 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - 200 null application/json; charset=utf-8 749.5372ms
+2026-07-20 13:53:14.471 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - null null
+2026-07-20 13:53:14.491 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 19.514ms
+2026-07-20 13:53:27.106 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Auth/login - application/json 69
+2026-07-20 13:53:27.115 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 13:53:27.137 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(BankCore.Application.Features.Auth.Commands.Login.LoginCommand) on controller BankCore.Api.Controllers.AuthController (BankCore.Api).
+2026-07-20 13:53:27.269 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CustomerId], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-20 13:53:27.502 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-20 13:53:27.755 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 1000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-20 13:53:27.770 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=10.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2026-07-20 13:53:27.774 +03:00 [INF] Executed action BankCore.Api.Controllers.AuthController.Login (BankCore.Api) in 633.0148ms
+2026-07-20 13:53:27.775 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AuthController.Login (BankCore.Api)'
+2026-07-20 13:53:27.777 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 670.7761ms
+2026-07-20 13:53:29.653 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:53:29.666 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:53:29.670 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:53:29.688 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@customerId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountNumber], [a].[CustomerId], [a].[IsActive], [a].[RowVersion], [a].[Type], [a].[Balance_Amount], [a].[Balance_Currency]
+FROM [Accounts] AS [a]
+WHERE [a].[CustomerId] = @customerId
+2026-07-20 13:53:29.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BankCore.Application.Features.Customers.Queries.GetCustomerById.AccountDto, BankCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-20 13:53:29.699 +03:00 [INF] Executed action BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api) in 23.9647ms
+2026-07-20 13:53:29.702 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:53:29.705 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - 200 null application/json; charset=utf-8 51.6936ms
+2026-07-20 13:54:30.976 +03:00 [INF] Request starting HTTP/2 POST https://localhost:5001/api/Accounts - application/json 105
+2026-07-20 13:54:30.982 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.Create (BankCore.Api)'
+2026-07-20 13:54:30.989 +03:00 [INF] Route matched with {action = "Create", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(BankCore.Application.Features.Accounts.Commands.CreateAccount.CreateAccountCommand) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:54:31.070 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@id='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[Email], [c].[FullName], [c].[NationalId]
+FROM [Customers] AS [c]
+WHERE [c].[Id] = @id
+2026-07-20 13:54:31.160 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 26), @p2='?' (DbType = Guid), @p3='?' (DbType = Boolean), @p4='?' (DbType = Int32), @p5='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p6='?' (Size = 3)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Accounts] ([Id], [AccountNumber], [CustomerId], [IsActive], [Type], [Balance_Amount], [Balance_Currency])
+OUTPUT INSERTED.[RowVersion]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-07-20 13:54:31.183 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (Size = 200), @p2='?' (Size = 1000), @p3='?' (DbType = DateTime2), @p4='?' (DbType = Boolean), @p5='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Id], [CommandName], [ErrorMessage], [ExecutedAt], [IsSuccess], [RequestData])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+2026-07-20 13:54:31.187 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Guid'.
+2026-07-20 13:54:31.192 +03:00 [INF] Executed action BankCore.Api.Controllers.AccountsController.Create (BankCore.Api) in 199.7032ms
+2026-07-20 13:54:31.193 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AccountsController.Create (BankCore.Api)'
+2026-07-20 13:54:31.196 +03:00 [INF] Request finished HTTP/2 POST https://localhost:5001/api/Accounts - 200 null application/json; charset=utf-8 220.0448ms
+2026-07-20 13:54:45.079 +03:00 [INF] Request starting HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - null null
+2026-07-20 13:54:45.084 +03:00 [INF] Executing endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:54:45.085 +03:00 [INF] Route matched with {action = "GetCustomer", controller = "Accounts"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetCustomer(System.Guid) on controller BankCore.Api.Controllers.AccountsController (BankCore.Api).
+2026-07-20 13:54:45.104 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@customerId='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[AccountNumber], [a].[CustomerId], [a].[IsActive], [a].[RowVersion], [a].[Type], [a].[Balance_Amount], [a].[Balance_Currency]
+FROM [Accounts] AS [a]
+WHERE [a].[CustomerId] = @customerId
+2026-07-20 13:54:45.117 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BankCore.Application.Features.Customers.Queries.GetCustomerById.AccountDto, BankCore.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-20 13:54:45.123 +03:00 [INF] Executed action BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api) in 35.8111ms
+2026-07-20 13:54:45.125 +03:00 [INF] Executed endpoint 'BankCore.Api.Controllers.AccountsController.GetCustomer (BankCore.Api)'
+2026-07-20 13:54:45.128 +03:00 [INF] Request finished HTTP/2 GET https://localhost:5001/api/Accounts/customer/5d92da39-f690-4be6-80b5-4a4d4815d44b - 200 null application/json; charset=utf-8 49.7138ms

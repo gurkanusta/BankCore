@@ -1,4 +1,7 @@
-﻿namespace BankCore.Domain.ValueObjects;
+﻿using BankCore.Domain.Constants;
+
+namespace BankCore.Domain.ValueObjects;
+
 
 public class Money {
     public decimal Amount { get; }
@@ -7,11 +10,11 @@ public class Money {
     public Money(decimal amount, string currency) {
         if (amount < 0)
         {
-            throw new ArgumentException("Tutar negatif olamaz.", nameof(amount));
+            throw new ArgumentException(ValidationMessages.AmountMustBePositive, nameof(amount));
         }
         if (string.IsNullOrWhiteSpace(currency))
         {
-            throw new ArgumentException("Para birimi boş olamaz.", nameof(currency));
+            throw new ArgumentException(ValidationMessages.CurrencyRequired, nameof(currency));
         }
         Amount = amount;
         Currency = currency;
@@ -27,7 +30,7 @@ public class Money {
         EnsureSameCurrency(other);
         if (Amount < other.Amount)
         {
-            throw new InvalidOperationException("Çıkarma işlemi sonucu negatif olamaz.");
+            throw new InvalidOperationException(ValidationMessages.SubtractionOperationCannotBeNegative);
         }
         return new Money(Amount - other.Amount, Currency);
     }
@@ -39,7 +42,7 @@ public class Money {
     private void EnsureSameCurrency(Money other)
     {
         if (Currency != other.Currency)
-            throw new InvalidOperationException("Farklı para birimleri işleme alınamaz.");
+            throw new InvalidOperationException(ValidationMessages.DontUseDifferentCurrency);
     }
 
     public override bool Equals(object? obj)

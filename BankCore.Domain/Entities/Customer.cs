@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BankCore.Domain.Constants;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -17,11 +18,11 @@ namespace BankCore.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(fullName))
             {
-                throw new ArgumentException("Ad soyad boş olamaz.", nameof(fullName));
+                throw new ArgumentException(ValidationMessages.FullNameRequired, nameof(fullName));
             }
 
             if (string.IsNullOrWhiteSpace(nationalId) || nationalId.Length != 11)
-                throw new ArgumentException("TC Kimlik No 11 haneli olmalıdır.", nameof(nationalId));
+                throw new ArgumentException(ValidationMessages.NationalIdLength, nameof(nationalId));
 
 
             Id = Guid.NewGuid();

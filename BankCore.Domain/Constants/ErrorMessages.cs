@@ -17,6 +17,7 @@ public static class ErrorMessages
     public const string InactiveAccountOperation = "Pasif hesaba işlem yapılamaz.";
     public const string InsufficientBalance = "Bakiye yetersizdir.";
     public const string InactiveAccount= "Hesap aktif değildir.";
+    public const string AccountNumberCannotBeEmpty = "Hesap numarası boş olamaz.";
 
     //kimlik doğrulama
     public const string InvalidLoginCredentials = "E-posta veya şifre hatalı.";

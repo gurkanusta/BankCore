@@ -5,7 +5,7 @@ using BankCore.Domain.Enums;
 using BankCore.Domain.ValueObjects;
 using BankCore.Domain.Exceptions;
 using BankCore.Domain.Constants;
-using BankCore.Domain.Exceptions;
+
 
 
 namespace BankCore.Domain.Entities
@@ -25,7 +25,7 @@ namespace BankCore.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(accountNumber))
             {
-                throw new ArgumentException("Hesap numarası boş olamaz.", nameof(accountNumber));
+                throw new ArgumentException(ErrorMessages.AccountNumberCannotBeEmpty, nameof(accountNumber));
             }
             Id = Guid.NewGuid();
             CustomerId = customerId;
